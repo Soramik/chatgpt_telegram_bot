@@ -9,10 +9,6 @@ services:
       - chatgpt_network
     volumes:
       - ${MONGODB_PATH:-./mongodb}:/data/db
-    environment:
-    - MONGO_INITDB_ROOT_USERNAME=chatgpt_user
-    - MONGO_INITDB_ROOT_PASSWORD=chatgpt_password
-    command: mongod --auth
 
   chatgpt_telegram_bot:
     container_name: chatgpt_telegram_bot
@@ -23,6 +19,8 @@ services:
       dockerfile: Dockerfile
     networks:
       - chatgpt_network
+    volumes:
+      - ${CONFIG_PATH:-./config}:config
     depends_on:
       - mongo
 
