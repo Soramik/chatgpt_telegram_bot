@@ -20,7 +20,7 @@ services:
     networks:
       - chatgpt_network
     volumes:
-      - ${CONFIG_PATH:-./config}:config
+      - ${CONFIG_PATH:-./config}:/code/config
     depends_on:
       - mongo
 
@@ -43,4 +43,4 @@ services:
       - mongo
 
 networks:
-  - chatgpt_network
+  chatgpt_network:

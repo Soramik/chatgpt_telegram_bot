@@ -44,7 +44,7 @@ class Database:
             "first_seen": datetime.now(),
             
             "current_dialog_id": None,
-            "current_chat_mode": "assistant",
+            "current_chat_mode": "助理",
 
             "n_used_tokens": 0
         }
