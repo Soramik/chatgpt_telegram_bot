@@ -29,12 +29,12 @@ import openai_utils
 db = database.Database()
 logger = logging.getLogger(__name__)
 
-HELP_MESSAGE = """Commands:
+HELP_MESSAGE = """命令说明:
 ⚪ /retry – Regenerate last bot answer
 ⚪ /new – Start new dialog
 ⚪ /mode – Select chat mode
 ⚪ /balance – Show balance
-⚪ /help – Show help
+⚪ /help – 显示帮助
 """
 
 
