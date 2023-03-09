@@ -99,7 +99,7 @@ class ChatGPT:
         messages = [{"role": "system", "content": prompt}]
         for dialog_message in dialog_messages:
             messages.append({"role": "user", "content": dialog_message["user"]})
-            messages.append({"role": "assistant", "content": dialog_message["bot"]})
+            messages.append({"role": "助理", "content": dialog_message["bot"]})
         messages.append({"role": "user", "content": message})
 
         return messages
